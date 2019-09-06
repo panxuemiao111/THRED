@@ -47,7 +47,7 @@ class AbstractModel(object):
         if hparams.learning_rate_decay_scheme == "luong10":
             start_decay_step = int(hparams.num_train_steps / 2)
             remain_steps = hparams.num_train_steps - start_decay_step
-            decay_steps = int(remain_steps / 10)  # decay 10 times
+            decay_steps = int(remain_steps / 10)  # decay every 10 times
             decay_factor = 0.5
         elif hparams.learning_rate_decay_scheme == "luong234":
             start_decay_step = int(hparams.num_train_steps * 2 / 3)
@@ -86,12 +86,12 @@ class AbstractModel(object):
         if hparams.scheduled_sampling_decay_scheme == "luong10":
             start_decay_step = int(hparams.num_train_steps / 2)
             remain_steps = hparams.num_train_steps - start_decay_step
-            decay_steps = int(remain_steps / 10)  # decay 10 times
+            decay_steps = int(remain_steps / 10)  # decay every 10 times
             decay_factor = 0.5
         elif hparams.scheduled_sampling_decay_scheme == "luong234":
             start_decay_step = int(hparams.num_train_steps * 2 / 3)
             remain_steps = hparams.num_train_steps - start_decay_step
-            decay_steps = int(remain_steps / 4)  # decay 4 times
+            decay_steps = int(remain_steps / 4)  # decay every 4 times
             decay_factor = 0.5
         elif hparams.scheduled_sampling_decay_scheme == "manual":
             start_decay_step = hparams.start_decay_step
