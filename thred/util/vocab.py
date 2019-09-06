@@ -6,8 +6,8 @@ import tensorflow as tf
 from tensorflow.python.ops import lookup_ops
 
 UNK, UNK_ID = "<UNK>", 0
-SOS, SOS_ID = "<S>", 1
-EOS, EOS_ID = "</S>", 2
+SOS, SOS_ID = "<S>", 1               # start of sentence token
+EOS, EOS_ID = "</S>", 2                 # end of sentence token 
 SEP, SEP_ID = "<SEP>", 3
 
 RESERVED_WORDS = [UNK, SOS, EOS, SEP]
